@@ -6,40 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Madina Junaydullayevna</title>
 
-  <!-- Meta Pixel Code -->
- <!-- Optimized Meta Pixel Code (Lazy Load + Async) -->
-<script>
-  window.addEventListener('load', function () {
-    setTimeout(() => {
-      !function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod ?
-            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+  <!-- Meta Pixel Code (Lazy Load + Async) -->
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        !function(f,b,e,v,n,t,s){
+          if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+          t=b.createElement(e);t.async=!0;t.src=v;
+          s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '994529509292030');
+        fbq('track', 'PageView');
+      }, 1200); // 1.2 sekunddan keyin yuklaydi
+    });
+  </script>
 
-      fbq('init', '994529509292030');
-      fbq('track', 'PageView');
-    }, 1200); // 1.2 sekunddan keyin yuklaydi – saytni sekinlashtirmaydi
-  });
-</script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=994529509292030&ev=PageView&noscript=1"/>
+  </noscript>
 
-<noscript>
-  <img height="1" width="1" style="display:none"
-       src="https://www.facebook.com/tr?id=994529509292030&ev=PageView&noscript=1"/>
-</noscript>
-
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -99,6 +87,8 @@
       width: 100%;
       max-width: 360px;
       margin-bottom: 30px;
+      border-radius: 15px;
+      object-fit: cover;
     }
 
     /* BUTTON */
@@ -121,17 +111,23 @@
       text-decoration: none;
       width: 100%;
       transition: 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
     .subscribe-btn img {
       width: 28px;
       height: 28px;
+      transition: transform 0.3s ease;
     }
 
     .subscribe-btn:hover {
       background: linear-gradient(90deg, #0288D1, #0097A7);
       box-shadow: 0 8px 15px rgba(0, 150, 168, 0.4);
       transform: translateY(-3px);
+    }
+
+    .subscribe-btn:hover img {
+      transform: scale(1.2);
     }
 
     /* EXTRA TEXTS */
@@ -203,8 +199,6 @@
       obuna bo'ling!
     </p>
 
-
-
   </div>
 
   <script>
@@ -214,12 +208,11 @@
       console.log("Foydalanuvchi OBUNA BO'LISH tugmasini bosdi");
     });
 
-    /* 10 soniya ichida avtomatik Telegramga yo‘naltirish */
+    // Agar xohlansa, foydalanuvchi 10 soniya ichida avtomatik yo'naltirilishi mumkin
     // setTimeout(() => {
     //   window.location.href = "https://t.me/+XLq4LXLQudxiZmQ6";
     // }, 10000);
   </script>
-
 </body>
 
 </html>
